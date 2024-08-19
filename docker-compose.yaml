@@ -1,0 +1,7 @@
+services:
+  fastapi-app:
+    build: .                             # Build the image from the Dockerfile in the current directory
+    container_name: fastapi-container    # Permanent name for your container
+    ports:
+      - "8000:8000"                     # Maps port 8000 on the host to port 8000 in the container
+    restart: always                     # Ensures the container restarts automatically if it stops
